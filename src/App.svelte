@@ -1,17 +1,17 @@
 <script>
-	import FeedbackForm from './components/FeedbackForm.svelte'
-	import FeedbackList from './components/FeedbackList.svelte'
-	import FeedbackStats from './components/FeedbackStats.svelte'
-	import Filter from './components/Filter.svelte'
+	import { Router, Route } from "svelte-routing";
 	import { SvelteToast } from '@zerodevx/svelte-toast'
+	import HomePage from './HomePage.svelte';
+	import FeedbackPage from './FeedbackPage.svelte';
+	
+	export let url = "";
 </script>
 
-<main class="container">
-
-	<FeedbackForm />
-	<Filter />
-	<FeedbackStats />
-	<FeedbackList />
+<div class="app-container">
+	<Router url = {url}>
+		<Route path="feedbackpage"><FeedbackPage/></Route>
+		<Route path="/"><HomePage /></Route>
+	</Router>
 	<SvelteToast />
+</div>
 
-</main>
