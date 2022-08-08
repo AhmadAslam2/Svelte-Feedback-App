@@ -6844,15 +6844,15 @@ var app = (function () {
     			p = element("p");
     			t3 = text(t3_value);
     			attr_dev(span, "class", "rating-text");
-    			add_location(span, file$4, 21, 4, 590);
+    			add_location(span, file$4, 28, 4, 794);
     			attr_dev(div0, "class", "num-display");
-    			add_location(div0, file$4, 20, 2, 560);
+    			add_location(div0, file$4, 27, 2, 764);
     			attr_dev(button, "class", "delete");
-    			add_location(button, file$4, 23, 2, 648);
+    			add_location(button, file$4, 30, 2, 852);
     			attr_dev(p, "class", "text-display");
-    			add_location(p, file$4, 25, 2, 780);
+    			add_location(p, file$4, 32, 2, 984);
     			attr_dev(div1, "class", "card");
-    			add_location(div1, file$4, 19, 0, 539);
+    			add_location(div1, file$4, 26, 0, 743);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6928,6 +6928,13 @@ var app = (function () {
 
     			return courseArray;
     		});
+
+    		toast.push('Feedback Deleted', {
+    			theme: {
+    				'--toastBackground': '#F56565',
+    				'--toastBarBackground': '#C53030'
+    			}
+    		});
     	};
 
     	const writable_props = ['item'];
@@ -6946,6 +6953,7 @@ var app = (function () {
     		Icon,
     		courses,
     		courseId,
+    		toast,
     		item,
     		currentCourseId,
     		handleDelete

@@ -1,6 +1,7 @@
 <script>
   import Icon from '@iconify/svelte';
   import {courses, courseId} from '../stores'
+  import { toast } from '@zerodevx/svelte-toast'
 
   export let item
 
@@ -13,6 +14,12 @@
         courseArray[currentCourseId] = {...courseArray[currentCourseId], feedbacks: [...newFeedbacks]}
         return courseArray
       })
+      toast.push('Feedback Deleted', {
+      theme: {
+        '--toastBackground': '#F56565',
+        '--toastBarBackground': '#C53030'
+      }
+      })  
   }
 
 </script>
